@@ -25,7 +25,7 @@ SECRET_KEY = '%3*)$pyfnlxbky)-zjesbff%b^1qxx-j@w27n3snz600l^3iww'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['stream3-project-helderv.c9users.io']
+ALLOWED_HOSTS = ['stream3-project-helderv.c9users.io', 'kambolife.herokuapp.com']
 
 
 # Application definition
