@@ -1,0 +1,10 @@
+from __future__ import unicode_literals
+from __future__ import print_function
+
+language: python
+python:
+  - "2.7.14"
+  - "3.5.0"
+install: "pip install -r requirements.txt"
+script:
+  - SECRET_KEY="whatever" ./manage.py test
