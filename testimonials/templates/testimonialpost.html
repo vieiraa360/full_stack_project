@@ -13,13 +13,14 @@
                 </a>
                 <p><span class="boldtext">Author:</span> {{ user }}</p>
             </div>
-            <div class="col-md-10 col-sm-9">
-                
-                {% if testimonial.image %}
-                    <img class="img-testimonialpost" src="/media/{{ testimonial.image }}">
-                {% endif %}
-                
-                <h3>{{ testimonial.title }}</h3>
+            <div class="col-md-10 col-sm-6">
+                <div class="row col-md-12 col-sm-6">
+                    {% if testimonial.image %}
+                        <p><img class="img-testimonialpost" src="/media/{{ testimonial.image }}"></p>
+                        <p><br></p>
+                    {% endif %}
+                </div>
+               <p><h3>{{ testimonial.title }}</h3></p>
                 <div class="row">
                     <div class="col-xs-9">
                         <p>{{ testimonial.text|safe }}</p>
