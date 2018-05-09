@@ -30,7 +30,7 @@ SECRET_KEY = 'SECRET_key'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['stream3-project-helderv.c9users.io', 'kambolife.herokuapp.com']
+ALLOWED_HOSTS = ['stream3-project-helderv.c9users.io', 'full-stack-stream3.herokuapp.com/']
 
 
 # Application definition
