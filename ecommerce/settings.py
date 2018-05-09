@@ -204,3 +204,14 @@ TINYMCE_DEFAULT_CONFIG = {
 }
 TINYMCE_SPELLCHECKER = True
 TINYMCE_COMPRESSOR = True
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'kambolife@gmail.com' #my gmail username
+EMAIL_HOST_PASSWORD = 'yourpassword' #my gmail password
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "Kambolife <kambolife@gmail.com>"
+
+
+ADMINS = [('admin', EMAIL_HOST_USER)]
+MANAGERS = ADMINS
