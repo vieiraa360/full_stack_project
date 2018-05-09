@@ -30,6 +30,10 @@ from blog import urls as urls_blog
 from posts import urls as urls_posts
 from posts.views import get_posts
 from posts.views import post_detail
+from testimonials import urls as urls_testimonials
+from testimonials.views import get_testimonials
+from testimonials.views import testimonial_detail
+from testimonials.views import create_or_edit_testimonial
 from posts.views import create_or_edit_post
 
 urlpatterns = [
@@ -45,5 +49,6 @@ urlpatterns = [
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
+    url(r'^testimonials/', include(urls_testimonials)),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
 ]

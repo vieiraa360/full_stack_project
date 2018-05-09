@@ -32,10 +32,79 @@ body {
     font-size: 1.5em;
 }
 
+.ul {
+    list-style-type: none;
+}
+
   .navbar-brand {
     font-size: 2em;
   }
 
+.navbar-form input, .form-inline input {
+    width: auto;
+}
+
+.navbar.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.story-img {
+    margin-top: 25%;
+    display: block;
+}
+
+a, a:hover {
+    color: #223344;
+    text-decoration: none;
+}
+ 
+.icon-bar {
+    background-color: #fff;
+}
+ 
+.dropdown-menu {
+    min-width: 250px;
+}
+ 
+ 
+.thumbnail {
+    margin-bottom: 8px;
+}
+ 
+.img-container {
+    overflow: hidden;
+    height: 170px;
+}
+ 
+.img-container img {
+    min-width: 280px;
+    min-height: 180px;
+    max-width: 380px;
+    max-height: 280px;
+}
+ 
+.txt-container {
+    overflow: hidden;
+    height: 100px;
+}
+ 
+.panel .lead {
+    overflow: hidden;
+    height: 90px;
+}
+ 
+.label-float {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    opacity: .9;
+    padding: 6px;
+    color: #fff;
+}
 
   h2 {
     font-size: 1em;
@@ -142,6 +211,11 @@ caption p {
 
 .row {
     margin-left: 30px;
+}
+
+.panel {
+    border-color: transparent;
+    border-radius: 0;
 }
 
 .panel-default {
@@ -257,7 +331,7 @@ caption p {
 }
 @media screen and (max-width: 768px) {
   .cover {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0; 
   }
 }
@@ -266,7 +340,7 @@ caption p {
 }
 @media screen and (max-width: 768px) {
   .cover.cover_2 {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0;
   }
 }
@@ -284,7 +358,7 @@ caption p {
     padding-right: 15px;
   }
 }
-.cover .desc h2 {
+.cover .desc {
     color: #fff;
     text-transform: uppercase;
     font-size: 60px;
@@ -295,7 +369,7 @@ caption p {
     font-weight: 700;
 }
 @media screen and (max-width: 768px) {
-  .cover .desc h2 {
+  .cover .desc {
     font-size: 40px;
   }
 }
@@ -315,7 +389,7 @@ caption p {
     border: 2px solid #fff !important;
     background: transparent !important;
 }
-.cover .desc span a.site-name {
+.cover .desc span .site-name {
     padding-bottom: 2px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
