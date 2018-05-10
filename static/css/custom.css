@@ -167,7 +167,9 @@ a, a:hover {
     opacity:1;
 }
 
-
+.img-testimonialpost {
+    border-radius: 10px;
+}
 
 .icon-bar {
     background-color: #fff;

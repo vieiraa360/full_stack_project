@@ -4,9 +4,10 @@
   <div class="row">
         <div class="col-sm col-sm-6 col-sm">
           <div class="card" id="card1">
-            <form name="contactForm" ng-controller="FormController" data-ng-submit="submitForm()" method="POST" novalidate>
+            <form name="contactForm" ng-controller="FormController" data-ng-submit="submitForm()" method="POST">
+              {% csrf_token %}
               <label for="contactForm"><span style="color: #29335C"><h2>Contact Me</h2></span></label>
-
+              
               <div class="form-group">
               <input type="email" name="email" class="form-control" ng-model="email.text" ng-pattern = '/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i' required placeholder="Email">
               <p ng-show="contactForm.email.$pristine" class="help-block"></p>
