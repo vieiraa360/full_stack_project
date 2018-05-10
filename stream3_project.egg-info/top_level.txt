@@ -1,0 +1,10 @@
+accounts
+blog
+cart
+checkout
+ecommerce
+home
+posts
+products
+search
+testimonials
