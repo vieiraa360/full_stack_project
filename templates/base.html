@@ -43,8 +43,8 @@
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'get_posts' %}">FAQs</a></li>
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'about' %}">About</a></li>
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'contact' %}">Contact</a></li>
-                <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'get_testimonials' %}">Testimonials</a></li>
                     {% if user.is_authenticated %}
+                <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'get_testimonials' %}">Testimonials</a></li>
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'profile' %}">Profile</a></li>
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'logout' %}">Log Out</a></li>
             {% else %}
