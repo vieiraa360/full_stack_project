@@ -45,9 +45,11 @@
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'contact' %}">Contact</a></li>
                     {% if user.is_authenticated %}
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'get_testimonials' %}">Testimonials</a></li>
+                <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'new_testimonial' %}">Add testimonial</a></li>
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'profile' %}">Profile</a></li>
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'logout' %}">Log Out</a></li>
             {% else %}
+                <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'get_testimonials' %}">Testimonials</a></li>
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'register' %}">Register</a></li>
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="{% url 'login' %}">Log In</a></li>
             {% endif %}
@@ -75,11 +77,11 @@
     <div>
         {% block content %} {% endblock %}
     </div>
-    <footer>
+<!--    <footer>
         <div class="container">
             <p>Copyright © Kambolife | <a href="">Privacy Policy</a> | <a href="">Terms of Use
             </p>
         </div>
-    </footer>
+    </footer>-->
 </body>
 </html>

@@ -4,7 +4,11 @@ from django.urls import reverse
 from .forms import UserLoginForm, UserRegistrationForm
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.auth.models import User
+from .forms import UserForm
+from django.forms.models import inlineformset_factory
+from django.core.exceptions import PermissionDenied
+from django.db import transaction
 
 # Create your views here.
 def index(request):
@@ -73,4 +77,3 @@ def register(request):
 
     args = {'user_form': user_form}
     return render(request, 'register.html', args)
-

@@ -35,6 +35,8 @@ from testimonials.views import get_testimonials
 from testimonials.views import testimonial_detail
 from testimonials.views import create_or_edit_testimonial
 from posts.views import create_or_edit_post
+from avatar import urls as avatar_urls
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -50,5 +52,6 @@ urlpatterns = [
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
     url(r'^testimonials/', include(urls_testimonials)),
+    url(r'^avatar/', include('avatar.urls')),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
 ]
