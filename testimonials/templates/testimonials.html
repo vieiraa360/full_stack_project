@@ -10,7 +10,6 @@
 
     <div class="container">
         <div class="display">
-            <!--<p><a href="/testimonials/new/" class="btn btn-default pull-right">Add Testimonial</a></p>-->
         </div>
     </div>
 
@@ -20,8 +19,8 @@
 				<a class="story-img" href="#">
 					<img src="/media/img/profile.jpg" class="img-circle" width="100px">
 				</a>
-				
-                <p><span class="boldtext">Author: </span>{{ user }}</p>
+
+                <p><span class="boldtext">Author: </span>{{ testimonial.author }}</p>
             </div>
             <div class="col-md-10 col-sm-9">
                 <h3>{{ testimonial.title }}</h3>
@@ -35,4 +34,9 @@
             <hr>
         </div>
     {% endfor %}
+</div>
+    <footer>
+        <p>Copyright © Kambolife | <a href="">Privacy Policy</a> | <a href="">Terms of Use
+        </p>
+    </footer>
 {% endblock %}

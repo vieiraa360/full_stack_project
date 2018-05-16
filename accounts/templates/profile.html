@@ -2,28 +2,33 @@
 {% block content %}
 {% load avatar_tags %}
 
-    <div class="container">
-        <style type="text/css">
-            body {
-                margin-top: 70px;
-            }
-        </style>
+<div class="container">
+<style type="text/css">
+    body {
+        margin-top: 70px;
+    }
+</style>
 
-
-    <h2>Success!</h2>
-    <p>{% avatar user %}</p>
-    <p>You are logged in as <h3>{{ user.username }}</h3> </p>
-        <ul>
-            
-          <p>Location: {{ user.profile.location }}<br>
-          Birth Date: {{ user.profile.birth_date }}</p>
-        </ul>
-    <p>
-        <ul>
-             <li><a href="{% url 'avatar_add' %}">Add an avatar</a></li>
-             <li><a href="{% url 'avatar_change' %}" input type="submit" value="Upload">Change your avatar</a></li>
-        </ul>
-    </p>
-{% endblock %}
-
+    <div class="row">
+            <h2>Success!</h2>
+            <p>{% avatar user %}</p>
+            <p>You are logged in as <h3>{{ user.username }}</h3> </p>
+                <!--<ul>
+                    
+                  <p>Location: {{ user.profile.location }}<br>
+                  Birth Date: {{ user.profile.birth_date }}</p>
+                </ul>-->
+            <p>
+                <ul>
+                     <li><a href="{% url 'avatar_change' %}" input type="submit" value="Upload">Change your avatar</a></li>
+                </ul>
+            </p>
     </div>
+</div>
+
+    <footer>
+        <p>Copyright © Kambolife | <a href="">Privacy Policy</a> | <a href="">Terms of Use
+        </p>
+    </footer>
+
+{% endblock %}

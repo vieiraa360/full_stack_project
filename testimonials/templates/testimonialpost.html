@@ -6,12 +6,13 @@
                 margin-top: 70px;
             }
         </style>
+<div class="container">
         <div class="row">
             <div class="col-md-2 col-sm-3 text-center">
                 <a class="story-img" href="#">
                     <img src="/media/img/profile.jpg" class="img-circle" width="100px">
                 </a>
-                <p><span class="boldtext">Author:</span> {{ user }}</p>
+                <p><span class="boldtext">Author:</span> {{ testimonial.author }}</p>
             </div>
             <div class="col-md-10 col-sm-6">
                 <div class="row col-md-12 col-sm-6">
@@ -33,4 +34,11 @@
             </div>
         </div>
     </div>
+    
+</div>
+    <footer>
+        <p>Copyright © Kambolife | <a href="">Privacy Policy</a> | <a href="">Terms of Use
+        </p>
+    </footer>
 {% endblock %}
+
