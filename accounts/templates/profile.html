@@ -9,7 +9,7 @@
     }
 </style>
 
-    <div class="row">
+        <div class="row row-flex">
             <h2>Success!</h2>
             <p>{% avatar user %}</p>
             <p>You are logged in as <h3>{{ user.username }}</h3> </p>
@@ -23,12 +23,15 @@
                      <li><a href="{% url 'avatar_change' %}" input type="submit" value="Upload">Change your avatar</a></li>
                 </ul>
             </p>
-    </div>
+        </div>
 </div>
 
     <footer>
-        <p>Copyright © Kambolife | <a href="">Privacy Policy</a> | <a href="">Terms of Use
+      <div class="row">
+        <p>
+          <span>Copyright © Kambolife | <a href="">Privacy Policy</a> | <a href="">Terms of Use</span>
         </p>
+      </div>
     </footer>
 
 {% endblock %}
