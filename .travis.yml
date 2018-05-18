@@ -1,6 +1,3 @@
-from __future__ import unicode_literals
-from __future__ import print_function
-
 language: python 
   python:    - "3.4" 
   install: "pip install -r requirements.txt" 
