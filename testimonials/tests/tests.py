@@ -15,12 +15,12 @@ class TestTags(TestCase):
     def setUp(self):
         self.first = Testimonial.objects.create(
             text="first text",
-            author="testimonial.author",
+            author="first",
             active=True
         )
         self.second = Testimonial.objects.create(
             text="second text",
-            author="testimonial.author",
+            author="second",
             active=True
         )
         # Create an inactive testimonial which should not get returned.
@@ -31,7 +31,7 @@ class TestTags(TestCase):
         )
         self.third = Testimonial.objects.create(
             text="third text",
-            author="testimonial.author",
+            author="third",
             active=True
         )
 
