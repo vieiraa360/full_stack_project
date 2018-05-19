@@ -13,5 +13,5 @@ class ProductTests(TestCase):
         self. assertEqual(str(test_name), 'A product')
 
     def test_view_url_exists_at_desired_location(self):
-    	response = self.client.get("{% url 'products' %}")
+    	response = self.client.get("/products/")
     	self.assertEqual(response.status_code, 200)
