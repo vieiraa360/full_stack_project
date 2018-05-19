@@ -7,9 +7,9 @@ from accounts.models import UserProfile
 
 class UserProfileTest(TestCase):
     def test_details(self):
-        response = self.client.get('/profile/')
+        response = self.client.get('/accounts/profile/')
         self.assertEqual(response.status_code, 200)
         
     def test_index(self):
-            response = self.client.get('/index/')
+            response = self.client.get('/')
             self.assertEqual(response.status_code, 200)
