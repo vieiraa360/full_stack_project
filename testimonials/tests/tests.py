@@ -47,7 +47,7 @@ class TestTags(TestCase):
         Ensure we receive one Testimonial instance.
         """
         testimonial = random_testimonial_tag()
-        self.assertTrue(isinstance(testimonial, Testimonial))
+        self.assertTrue(isinstance(testimonial, User))
 
     def test_testimonials(self):
         """

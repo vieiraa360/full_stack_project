@@ -18,33 +18,19 @@ class UserProfile_Test(TestCase):
             response = self.client.get('/')
             self.assertEqual(response.status_code, 200)
 
-
-
-
-class LogIn_Test(TestCase):
-    def setUp(self):
-        self.credentials = {
-            'username': 'testuser',
-            'password': 'secret'}
-        User.objects.create_user(**self.credentials)
-    def test_login(self):
-        # send login data
-        response = self.client.post('/login/', self.credentials, follow=True)
-        # should be logged in now
-        self.assertTrue(response['user'].is_authenticated)
         
 
 
 class Setup_Class(TestCase):
 
     def setUp(self):
-        self.user = User.objects.create(email="user@mp.com", password="user", first_name="user", lastname="user")
+        self.user = User.objects.create(email="user@example.com", password="user", first_name="John", lastname="Smith")
 
 class UserForm_Test(TestCase):
 
     # Valid Form Data
     def test_UserForm_valid(self):
-        form = UserForm(data={'email': "user@mp.com", 'password': "user", 'first_name': "user", 'last_name': "user"})
+        form = UserForm(data={'email': "user@example.com", 'password': "user", 'first_name': "John", 'last_name': "Smith"})
         self.assertTrue(form.is_valid())
 
     # Invalid Form Data
