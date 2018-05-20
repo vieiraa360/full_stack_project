@@ -13,14 +13,17 @@
             <h2>Success!</h2>
             <p>{% avatar user %}</p>
             <p>You are logged in as <h3>{{ user.username }}</h3> </p>
-                <!--<ul>
+                <ul>
                     
-                  <p>Location: {{ user.profile.location }}<br>
-                  Birth Date: {{ user.profile.birth_date }}</p>
-                </ul>-->
+                  <p>First name: {{ user.first_name }}<br>
+                  Last name: {{ user.last_name }}<br>
+                  Email: {{ user.email }}
+                  </p>
+                </ul>
             <p>
                 <ul>
                      <li><a href="{% url 'avatar_change' %}" input type="submit" value="Upload">Change your avatar</a></li>
+                     <li><a href="{% url 'editprofile' %}" input type="submit" value="Save">Edit your profile</a></li>
                 </ul>
             </p>
         </div>

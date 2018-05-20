@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.shortcuts import get_list_or_404, get_object_or_404
 from django.contrib import messages, auth
 from django.urls import reverse
-from .forms import UserLoginForm, UserRegistrationForm
+from .forms import UserLoginForm, UserRegistrationForm, UserChangeForm, EditProfileForm
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from .forms import UserForm
+from .forms import *
 from django.forms.models import inlineformset_factory
 from django.core.exceptions import PermissionDenied
 from django.db import transaction
@@ -77,3 +78,16 @@ def register(request):
 
     args = {'user_form': user_form}
     return render(request, 'register.html', args)
+
+
+def editprofile(request):
+    if request.method == "POST":
+        form = UserChangeForm(request.POST, instance=request.user)
+        
+        if form.is_valid():
+            form = form.save()
+            return redirect('/accounts/profile/')
+    else:
+        form = UserChangeForm(instance=request.user)
+        args = {'form': form}
+    return render(request, 'editprofile.html', args)

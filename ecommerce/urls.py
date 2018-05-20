@@ -36,6 +36,7 @@ from testimonials.views import testimonial_detail
 from testimonials.views import create_or_edit_testimonial
 from posts.views import create_or_edit_post
 from avatar import urls as avatar_urls
+from accounts.views import editprofile
 
 
 urlpatterns = [
@@ -45,7 +46,6 @@ urlpatterns = [
     url(r'^faqs/', include(urls_posts)),
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^contact/',views.contact, name='contact'),
-    url(r'^$', all_products, name='index'),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),
