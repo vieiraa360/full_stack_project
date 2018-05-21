@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Testimonial
 from .forms import TestimonialPostForm
+from django.contrib.auth.models import User
+
 
 
 def get_testimonials(request):
@@ -25,6 +27,7 @@ def testimonial_detail(request, pk):
     """
     testimonial = get_object_or_404(Testimonial, pk=pk)
     testimonial.save()
+    testimonial.author = User.objects.get_or_create(name="")[0]
     return render(request, "testimonialpost.html", {'testimonial': testimonial})
 
 
