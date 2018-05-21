@@ -1,5 +1,7 @@
 from django.test import TestCase
 from django.test import Client
+from django.conf.urls import url
+from .views import adjust_cart
 # Create your tests here.
 
 
