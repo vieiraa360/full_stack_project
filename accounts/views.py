@@ -82,12 +82,12 @@ def register(request):
 
 def editprofile(request):
     if request.method == "POST":
-        form = UserChangeForm(request.POST, instance=request.user)
+        form = EditProfileForm(request.POST, instance=request.user)
         
         if form.is_valid():
             form = form.save()
             return redirect('/accounts/profile/')
     else:
-        form = UserChangeForm(instance=request.user)
+        form = EditProfileForm(instance=request.user)
         args = {'form': form}
     return render(request, 'editprofile.html', args)
