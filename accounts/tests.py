@@ -11,7 +11,6 @@ from .forms import *
 
 # Create your tests here.
 
-
 class CustomUserTest(TestCase):
 
     def test_registration_form(self):
@@ -49,7 +48,6 @@ class CustomUserTest(TestCase):
 form.full_clean())
 
 
-
 class UserProfile_Test(TestCase):
     def test_details(self):
         response = self.client.get('/accounts/profile/')
@@ -60,8 +58,6 @@ class UserProfile_Test(TestCase):
             self.assertTrue(response.status_code, 200)
 
         
-
-
 class Setup_Class(TestCase):
 
     def setUp(self):
