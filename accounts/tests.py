@@ -22,7 +22,7 @@ class CustomUserTest(TestCase):
             'password2': 'password1',
         })
  
-        self.assertTrue(form.is_valid())
+        self.assertFalse(form.is_valid())
     
     def test_registration_form_fails_with_missing_password(self):
         form = UserRegistrationForm({
