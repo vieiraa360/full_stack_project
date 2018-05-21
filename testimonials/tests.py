@@ -4,7 +4,7 @@ from django.conf.urls import url
 from django.http import HttpRequest
 from django.urls import reverse
 from .models import Testimonial
-from .views import create_or_edit_testimonial, get_testimonials
+from .views import get_testimonials
 
 
 
@@ -13,8 +13,3 @@ class TestimonialsPageTests(TestCase):
         response = self.client.get('/testimonials/')
         self.assertTrue(response.status_code, 200)
         self.assertTemplateUsed(response, 'testimonials.html')
-        
-    def test_form_url(self):
-        response = self.client.get('/testimonial/new/')
-        self.assertTrue(response.status_code, 200)
-        self.assertTemplateUsed(response, 'testimonialpostform.html')

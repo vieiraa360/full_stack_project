@@ -167,8 +167,7 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 STATICFILES_LOCATION = 'static'
 
-# Tell the staticfiles app to use S3Boto3 storage when writing the collected static files (when
-# you run `collectstatic`).
+# use S3Boto3 storage when writing the collected static files 
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
@@ -188,19 +187,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-# the directory for uploaded profile images
-#PROFILE_IMAGE_UPLOAD_DIR = 'img/profiles/'
 
-# the maximum size for uploaded images in kilobytes
-#PROFILE_IMAGE_MAX_SIZE = 64
-
-# the default profile image for users who haven't uploaded one yet
-#PROFILE_IMAGE_DEFAULT = 'img/profiles/default.png'
-
-
-#STATICFILE_FINDERS = (
-#  'django_collectstatic_bower.staticfiles.finders.BowerComponentFinder',
-#)
+STATICFILE_FINDERS = (
+  'django_collectstatic_bower.staticfiles.finders.BowerComponentFinder',
+)
 
 
 
