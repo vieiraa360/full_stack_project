@@ -12,11 +12,11 @@ from .forms import *
 class UserProfile_Test(TestCase):
     def test_details(self):
         response = self.client.get('/accounts/profile/')
-        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response.status_code, 200)
         
     def test_index(self):
             response = self.client.get('/')
-            self.assertEqual(response.status_code, 200)
+            self.assertTrue(response.status_code, 200)
 
         
 
