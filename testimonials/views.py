@@ -27,7 +27,6 @@ def testimonial_detail(request, pk):
     """
     testimonial = get_object_or_404(Testimonial, pk=pk)
     testimonial.save()
-    testimonial.author = User.objects.get_or_create(name="")[0]
     return render(request, "testimonialpost.html", {'testimonial': testimonial})
 
 

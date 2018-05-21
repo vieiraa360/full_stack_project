@@ -1,52 +1,38 @@
 from django.test import TestCase
-from django.contrib.auth.models import User
+from django.http import HttpRequest
+from django.test import SimpleTestCase
+from django.urls import reverse
 from .models import Testimonial
-from testimonials.templatetags.pinax_testimonials_tags import random_testimonial as random_testimonial_tag
-from testimonials.templatetags.pinax_testimonials_tags import random_testimonials as random_testimonials_tag
-from testimonials.templatetags.pinax_testimonials_tags import testimonials as testimonials_tag
+from .models.Testimonial import Testimonial_text
 
-class TestTags(TestCase):
 
-    def setUp(self):
-        self.first = Testimonial.objects.create(
-            text="first text",
-            author="first",
-            active=True
-        )
-        self.second = Testimonial.objects.create(
-            text="second text",
-            author="second",
-            active=True
-        )
-        # Create an inactive testimonial which should not get returned.
-        self.inactive = Testimonial.objects.create(
-            text="inactive text",
-            author="inactive",
-            # active=False  # set False by default
-        )
-        self.third = Testimonial.objects.create(
-            text="third text",
-            author="third",
-            active=True
-        )
 
-    def test_random_testimonials(self):
-        """
-        Ensure tag returns all active testimonials.
-        """
-        testimonials = random_testimonials_tag(3)
-        self.assertSetEqual(set(testimonials), set([self.first, self.second, self.third]))
+class TestimonialsPageTests(SimpleTestCase):
+    def test_view_uses_correct_template(self):
+        response = self.client.get(reverse('get_testimonials'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'testimonials.html')
+        
+    def test_view_url_by_name(self):
+        response = self.client.get(reverse('testimonial_detail'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'testimonialpost.html')
 
-    def test_random_testimonial(self):
-        """
-        Ensure we receive one Testimonial instance.
-        """
-        testimonial = random_testimonial_tag()
-        self.assertTrue(isinstance(testimonial, testimonial))
 
-    def test_testimonials(self):
-        """
-        Ensure tag returns all active testimonials in reverse creation order.
-        """
-        testimonials = testimonials_tag(3)
-        self.assertSequenceEqual(testimonials, [self.third, self.second, self.first])
+
+class TestimonialTests(TestCase):
+
+    @classmethod
+    def setUp(cls):
+        Testimonial.objects.create(text='just a test')
+
+    def test_content(self):
+        Testimonial= Testimonial.text(id=1)
+        expected_object_name = '{testimonial.text}'
+        self.assertEquals(expected_object_name, 'just a test')
+
+    def test_post_list_view(self):
+        response = self.client.get(reverse('testimonials'))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'just a test')
+        self.assertTemplateUsed(response, 'testimonials.html')
