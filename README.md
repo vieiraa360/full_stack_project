@@ -14,13 +14,27 @@ It is a **real costumer** Ecommerce site built with Python's *Django* framework.
 
 **Follow this link to view deployed version of the web app https://full-stack-stream3.herokuapp.com/**
 
-## Built with 
+## Technologies used
 1. Django
 2. Python
 2. HTML
 3. CSS
+4. JavaScript
+5. JQuery
 4. Bootstrap
 5. SQLite/Postgress database
+6. Cloud9 IDE
+7. Github
+7. Heroku
+
+## Added reusable apps and scripts
+1. Accounts - obtained from stream3 lessons
+2. Avatar - obtained from Django-avatar **https://django-avatar.readthedocs.io/en/latest/**
+2. Blog - obtained from stream3 lessons 
+3. Caption hover effect - obtained from **https://bootsnipp.com/snippets/featured/caption-hover-effect-text**
+4. Cookie consent popup disclaimer - obtained from ClouFlare CDN libraries **https://cdnjs.com/libraries/cookieconsent2**
+2. Posts - obtained from stream3 lessons
+3. Testimonials - obtained from pinaxproject **https://github.com/pinax/pinax-testimonials**
 
 ## Deployment / Hosting
 
@@ -64,17 +78,17 @@ os.environ.setdefault("AWS_STORAGE_BUCKET_NAME", "<aws bucket name>")
 
 
 6. In the terminal:
-    `$ python manage.py migrate` - this will apply migrations to your local sqlite database
-    `$ python manage.py createsuperuser` - this will create admin support
-    `$ python manage.py runserver` - should say starting development server..
-7. Go to your browser & type '127.0.0.1:8000' in the address bar
-8. The App should run on your browser - note that there will be no products/blog posts as you are running off your own blank database
-9. Log in to the admin panel by going to '127.0.0.1:8000/admin' & log in using the credentials you created for the superuser
-10. You can add products from here
+    `$ python manage.py migrate` - this will apply migrations to the database
+    `$ python manage.py createsuperuser` - this will create an administration user
+    `$ python manage.py runserver` - this will run the project
+7. Go to your browser and type '127.0.0.1:8000' in the address bar
+8. The app will run on your browser
+9. Log in to the admin panel by going to '127.0.0.1:8000/admin' and log in using the superuser credentials
+10. You can manage the site from there
 
 ## Running the tests
 
-Automated tests can be viewed in the tests.py file within the separate Apps. 
-To run the tests, in your terminal navigate to the folder with your project in, activate your virtual environment and type:
+The tests can be found in the tests.py file within the App folders. 
+To run the tests, activate the virtual environment and type:
 
-`$ python manage.py test <app name>`
+`$ python manage.py test`

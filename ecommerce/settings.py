@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'tinymce',
     'testimonials',
     'avatar',
-    
 ]
 
 MIDDLEWARE = [
@@ -88,9 +87,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
+COOKIE_CONSENT_CACHE_BACKEND = {
+        'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+
 
 if "DATABASE_URL" in os.environ:
 	DATABASES = {
