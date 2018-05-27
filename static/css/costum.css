@@ -498,6 +498,12 @@ ul {
     list-style-type: none;
 }
 
+#loginContainer {
+    max-width: 480;
+    margin: 50 auto;
+}
+
+
 #copyright {
     text-align: left;
     text-indent: 150px;
