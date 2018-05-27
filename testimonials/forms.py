@@ -6,4 +6,4 @@ from .models import Testimonial
 class TestimonialPostForm(forms.ModelForm):
     class Meta:
         model = Testimonial
-        fields = ('title', 'added', 'text', 'author', 'affiliation', 'image', 'published_date', 'active')
+        fields = ('title', 'added', 'text', 'author', 'image', 'published_date', 'active')
