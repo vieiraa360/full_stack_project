@@ -10,7 +10,7 @@
         <div class="row col-md-auto">
             <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
                 <fieldset class="form-group">
-                    <legend>Login</legend>
+                    <legend>Please login</legend>
                     {% csrf_token %}
                     {{ user_form | as_bootstrap }}
                     

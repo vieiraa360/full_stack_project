@@ -27,7 +27,7 @@
                         <p>{{ testimonial.text|safe }}</p>
                         <p><span class="boldtext">Views:</span> {{testimonial.views}}</p>
                         <a href="{% url 'get_testimonials' %}" class="btn btn-default">Back To Testimonials</a>
-                        <!--<a href="{% url 'edit_testimonial' testimonial.id %}" class="btn btn-default">Edit Testimonial</a>-->
+                        <a href="{% url 'edit_testimonial' testimonial.id %}" class="btn btn-default">Edit Testimonial</a>
                         <hr>
                     </div>
                 </div>

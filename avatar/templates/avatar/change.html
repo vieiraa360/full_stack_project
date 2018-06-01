@@ -5,7 +5,7 @@
 {% block content %}
 {% load bootstrap_tags %}
 
-    <div class="container">
+    <div class="container" id="changeAvatar">
         <style type="text/css">
             body {
                 margin-top: 70px;
@@ -19,7 +19,7 @@
     {% else %}
         <form method="POST" action="{% url 'avatar_change' %}">
             <ul>
-                {{ primary_avatar_form.as_ul }}
+                {{ primary_avatar_form.as_p }}
             </ul>
             <p>{% csrf_token %}<input type="submit" value="{% trans "Choose new Default" %}" /></p>
         </form>

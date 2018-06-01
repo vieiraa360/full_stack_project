@@ -499,10 +499,59 @@ ul {
 }
 
 #loginContainer {
-    max-width: 480;
     margin: 50 auto;
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1); 
 }
 
+#registerContainer {
+    margin: 0 auto;
+    max-width: 480px;
+    padding: 15px 35px 45px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1); 
+}
+
+#editProfile {
+    margin: 0 auto;
+    max-width: 480px;
+    padding: 15px 35px 45px;
+    background-color: #fff;
+}
+
+#postFormContainer {
+    margin: 0 auto;
+    max-width: 480px;
+    padding: 15px 35px 45px;
+    background-color: #fff;
+}
+
+#testimonialForm {
+    margin: 0 auto;
+    max-width: 740px;
+    padding: 15px 35px 45px;
+    background-color: #fff;
+}
+
+#changeAvatar {
+    max-width: 480px;
+    padding: 15px 35px 45px;
+    background-color: #fff;
+}
+
+#addAvatar {
+    max-width: 480px;
+    padding: 15px 35px 45px;
+    background-color: #fff;
+}
+
+#deleteAvatar {
+    max-width: 480px;
+    padding: 15px 35px 45px;
+    background-color: #fff;
+}
 
 #copyright {
     text-align: left;
