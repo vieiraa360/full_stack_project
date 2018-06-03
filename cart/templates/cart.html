@@ -21,7 +21,7 @@
                 <div class="caption">
                     <h3>{{ item.product.name }}</h3>
                     <p class="product-description">{{ item.product.description }}</p>
-                    <p>{{ item.product.price }}</p>
+                    <p>£ {{ item.product.price }}</p>
                     <p>
                         
                         <form class="form-inline" name="adjust_cart" method="post" action="{% url 'adjust_cart' item.id %}">
@@ -30,12 +30,12 @@
                                 <label for="exampleInputAmount" class="sr-only">New Qty</label>
                                 <div class="input-group">
                                     <div class="input-group-addon">Qty</div>
-                                    <input name="quantity" type="number" min="0" max="999" class="form-control">
+                                    <input name="quantity" type="number" min="0" max="999" required class="form-control">
                                     <div class="input-group-addon">{{item.quantity}}</div>
                                 </div>
                                 <p ng-show="adjust_cart.quantity.$pristine" class="help-block"></p>
                             </div>
-                            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true" ng-disabled="contactForm.$invalid"></span>Emend</button>
+                            <button type="submit" class="btn btn-primary" ng-disabled="adjust_cart.quantity.$invalid"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Emend</button>
                         </form>
                     </p>
                 </div>

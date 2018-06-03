@@ -27,6 +27,11 @@
               <textarea class="form-control" name="textarea" ng-model="message" rows="7" required placeholder="Type your message here!"></textarea>
               <p ng-show="contactForm.textarea.$pristine" class="help-block"></p>
               </div>
+              
+              <div class="form-group">
+                <p class="help-block" style="color: #29335C">Can we use your email address to contact you back?</p>
+               <input type="checkbox" name="consent-checkbox" value="consent-checkbox" required id="consent-checkbox"><label for="consent-checkbox" style="color: #29335C">&emsp; Yes please!</label>
+              </div>
 
               <button type="submit" id="sendmail" class="btn btn-primary btn-large" data-toggle="modal" data-target="#mailSent" ng-disabled="contactForm.$invalid">Submit</button>
             </form>
