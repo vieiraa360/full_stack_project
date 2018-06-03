@@ -18,7 +18,7 @@
                 <p class="help-block" style="color: #29335C">Can we keep your personal information for the purpose of your authentication once you login to the website?</p>
                <input type="checkbox" name="data-consent-checkbox" value="data-consent-checkbox" required id="data-consent-checkbox"><label for="data-consent-checkbox" style="color: #29335C">&emsp; Yes please!</label>
               </div>
-                <button type="submit" class="btn btn-primary">Create account</button>
+                <button type="submit" ng-disabled="contactForm.$invalid" class="btn btn-primary">Create account</button>
             </fieldset>
         </form>
     </div>
