@@ -37,6 +37,7 @@ from testimonials.views import create_or_edit_testimonial
 from posts.views import create_or_edit_post
 from avatar import urls as avatar_urls
 from accounts.views import editprofile
+from checkout import urls as urls_checkout
 
 
 urlpatterns = [
