@@ -1,5 +1,5 @@
 from django.conf.urls import url
-
+from ecommerce import settings
 from avatar import views
 from django.views.static import serve
 from ecommerce.settings import MEDIA_ROOT

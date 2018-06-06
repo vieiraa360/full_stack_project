@@ -193,6 +193,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
+#AVATAR_STORAGE_DIR = '/media/avatars/'
+
+
 
 STATICFILE_FINDERS = (
   'django_collectstatic_bower.staticfiles.finders.BowerComponentFinder',
@@ -206,7 +209,7 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 
-#TINYMCE_JS_URL = 'http://debug.example.org/tiny_mce/tiny_mce_src.js'
+TINYMCE_JS_URL = '/static/js/tinymce/tinymce.min.js'
 TINYMCE_DEFAULT_CONFIG = {
     'plugins': "table,spellchecker,paste,searchreplace",
     'theme': "advanced",
@@ -217,8 +220,8 @@ TINYMCE_SPELLCHECKER = True
 TINYMCE_COMPRESSOR = True
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'kambolife@gmail.com' #my gmail username
-EMAIL_HOST_PASSWORD = 'kambolife7' #my gmail password
+EMAIL_HOST_USER = 'kambolife@gmail.com'
+EMAIL_HOST_PASSWORD = 'kambolife7'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = "Kambolife <kambolife@gmail.com>"
