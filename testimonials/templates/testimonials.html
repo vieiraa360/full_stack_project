@@ -1,23 +1,27 @@
 {% extends 'base.html' %}
+{% load bootstrap_tags %}
+{% load i18n avatar_tags %}
+{% load avatar_tags %}
 {% block content %}
 
-    <div class="container">
+
+<div class="container">
         <style type="text/css">
             body {
                 margin-top: 70px;
             }
         </style>
 
-    <div class="container">
-        <div class="display">
-        </div>
+
+    <div class="display">
     </div>
 
+
 	{% for testimonial in testimonials %}
+	 <span>{% avatar testimonial.author class="img-circle img-responsive" id="user_avatar" %}</span>
 		<div class="row">
 			<div class="col-md-2 col-sm-3 text-center">
-				<a class="story-img" href="#">
-					<img src="/media/img/profile.jpg" class="img-circle" width="100px">
+				<a class="story-img" href="/profile/">
 				</a>
 
                 <p><span class="boldtext">Author: </span>{{ testimonial.author }}</p>
@@ -35,11 +39,6 @@
         </div>
     {% endfor %}
 </div>
-    <footer>
-      <div class="row">
-        <p>
-          <span>Copyright © Kambolife | <a href="https://s3.eu-west-2.amazonaws.com/kambo-site/media/images/policy.png" target="_blank">Privacy Policy</a> | <a href="https://s3.eu-west-2.amazonaws.com/kambo-site/cookielaw/docs/cookies_policy.pdf" target="_blank">Cookies Policy</a> | <a href="https://s3.eu-west-2.amazonaws.com/kambo-site/media/images/terms.PNG" target="_blank">Terms of Use</span>
-        </p>
-      </div>
-    </footer>
+
+
 {% endblock %}

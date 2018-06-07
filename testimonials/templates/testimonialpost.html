@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load bootstrap_tags %}
+{% load i18n avatar_tags %}
 {% load avatar_tags %}
 {% block content %}
 
@@ -10,9 +12,9 @@
         </style>
 <div class="container">
         <div class="row">
+            <span>{% avatar testimonial.author class="img-circle img-responsive" id="user_avatar" %}</span>
             <div class="col-md-2 col-sm-3 text-center">
                 <a class="story-img" href="#">
-                    <img src="/media/img/profile.jpg" class="img-circle" width="100px">
                 </a>
                 <p><span class="boldtext">Author:</span> {{ testimonial.author }}</p>
             </div>
