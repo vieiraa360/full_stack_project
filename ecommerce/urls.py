@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from django.contrib import admin
-from accounts import urls as urls_accounts
+from accounts import urls as urls_accounts, urls_reset
 from products import urls as urls_products
 from cart import urls as urls_cart
 from search import urls as urls_search
@@ -33,6 +33,7 @@ urlpatterns = [
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^contact/',views.contact, name='contact'),
     url(r'^accounts/', include(urls_accounts)),
+    url(r'^accounts/password-reset/', include(urls_reset)),
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
