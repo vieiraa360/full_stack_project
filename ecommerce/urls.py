@@ -23,6 +23,9 @@ from posts.views import create_or_edit_post
 from avatar import urls as avatar_urls
 from accounts.views import editprofile
 from checkout import urls as urls_checkout
+from django.views.generic import RedirectView
+from home import urls as urls_home
+
 
 
 urlpatterns = [
@@ -31,7 +34,8 @@ urlpatterns = [
     url(r'^about/$', views.about, name='about'),
     url(r'^faqs/', include(urls_posts)),
     url(r'^tinymce/', include('tinymce.urls')),
-    url(r'^contact/',views.contact, name='contact'),
+    url(r'^contact/', views.contact, name='contact'),
+    url(r'^home/', include('home.urls')),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^accounts/password-reset/', include(urls_reset)),
     url(r'^products/', include(urls_products)),

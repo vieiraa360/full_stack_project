@@ -13,6 +13,7 @@ import os
 import dj_database_url
 import locale
 
+
 if os.path.exists('env.py'):
     import env
 
@@ -193,10 +194,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-#AVATAR_STORAGE_DIR = '/media/avatars/'
-
-
-
 STATICFILE_FINDERS = (
   'django_collectstatic_bower.staticfiles.finders.BowerComponentFinder',
 )
@@ -219,12 +216,14 @@ TINYMCE_DEFAULT_CONFIG = {
 TINYMCE_SPELLCHECKER = True
 TINYMCE_COMPRESSOR = True
 
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'kambolife@gmail.com'
+EMAIL_HOST_USER = 'heldervieiraster@gmail.com'
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = "Kambolife <kambolife@gmail.com>"
 
 
 ADMINS = [('admin', EMAIL_HOST_USER)]

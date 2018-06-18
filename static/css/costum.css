@@ -203,6 +203,7 @@ a, a:hover {
     border-radius: 50%;
 }
 
+
 #headerImg {
     max-height: 50px;
     opacity: 1;
@@ -220,6 +221,7 @@ a, a:hover {
     padding: 10px;
     border-radius: 3px;
 }
+
 
 .card:hover {
     background-color: #E6E7EC;
