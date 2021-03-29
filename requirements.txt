@@ -61,7 +61,7 @@ pyasn1==0.4.2
 pycairo==1.17.0
 pycparser==2.18
 pycryptodome==3.6.6
-Pygments==2.2.0
+Pygments==2.7.4
 pylint==1.8.4
 PyNaCl==1.2.1
 pyparsing==2.2.0
